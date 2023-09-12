@@ -1,13 +1,9 @@
-const [selectedPersona, setSelectedPersona] = useState(null);
-  const [activeChecked, setActiveChecked] = useState(false);
-  const [inactiveChecked, setInactiveChecked] = useState(false);
-  const [saleChecked, setSaleChecked] = useState(false);
-
-  const filteredItems = rewardItems.filter((item) => {
-    if ((activeChecked && item.status === 'active') ||
-        (inactiveChecked && item.status === 'inactive') ||
-        (saleChecked && item.status === 'sale')) {
-      return true;
-    }
-    return false;
-  });
+</div>
+              <ul className="list-group">
+                {filteredItems.map((item) => (
+                  <li key={item.id} className="list-group-item">
+                    {item.name} - {item.status}
+                  </li>
+                ))}
+              </ul>
+            </div>
